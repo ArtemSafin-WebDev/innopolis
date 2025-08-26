@@ -1,0 +1,20 @@
+@use "media";
+
+:root {
+  --primary-color: #27a108;
+  --text-color: #161821;
+  --red: #f60a18;
+  --montserrat: "Montserrat", sans-serif;
+  --onest: "Onest", sans-serif;
+  --dark-bg-color: #161821;
+  --grey-text-color: #9c9fb8;
+  --light-green-color: #45d320;
+  --pale-green-color: #c9ff99;
+  --grey-color: #eff0f6;
+  --content-padding: 6rem;
+  --container-width: 180rem;
+
+  @include media.breakpoint(mobile) {
+    --content-padding: 2rem;
+  }
+}

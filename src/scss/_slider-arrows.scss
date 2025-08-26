@@ -1,0 +1,40 @@
+.slider-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  align-self: center;
+
+  &:has(.swiper-button-lock) {
+    display: none;
+  }
+}
+
+.slider-arrows__btn {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  background-color: rgba(98, 104, 131, 0.1);
+
+  &.swiper-button-disabled {
+    cursor: default;
+    background-color: transparent;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:not(.swiper-button-disabled):hover {
+      background-color: rgba(98, 104, 131, 0.2);
+    }
+  }
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    transition: fill 0.2s;
+    color: var(--text-color);
+  }
+}
