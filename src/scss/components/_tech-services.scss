@@ -1,0 +1,11 @@
+@use '../utils';
+
+.tech-services {
+  @include utils.blockWrapper;
+  background-color: var(--bg-secondary);
+  padding: 8rem 6rem;
+}
+.tech-services__content {
+  @include utils.blockContent;
+  flex-direction: column;
+}

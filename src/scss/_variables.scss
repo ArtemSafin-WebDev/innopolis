@@ -14,6 +14,99 @@
   --content-padding: 6rem;
   --container-width: 180rem;
 
+  /* borders */
+  --corner-radius-xl: 8rem;
+  --corner-radius-l: 4.8rem;
+  --corner-radius-m: 2.4rem;
+  --border-green-shadow: #b9f343;
+
+  /* hover color */
+  --hover-indigo-blue: #4442ee;
+  --hover-lime-green: #c2e628;
+  --hover-sky-blue: #39b0f8;
+  --hover-orange: #ed7409;
+  --hover-purple: #811ac7;
+  --hover-teal: #0c7c59;
+  --hover-yellow: #ffdd33;
+
+  /* colors pallette */
+
+  --white: #ffffff;
+  --green-50: #c9ff99;
+  --green-100: #93f466;
+  --green-200: #5ce937;
+  --green-300: #45d320;
+  --green-400: #33b712;
+  --green-500: #27a108;
+  --green-600: #237f0a;
+  --green-700: #1c5e0a;
+  --green-800: #153f08;
+  --green-900: #0c2106;
+  --grey-50: #fcfcfd;
+  --grey-75: #eff0f6;
+  --grey-100: #dbdce7;
+  --grey-200: #bbbdd0;
+  --grey-300: #9c9fb8;
+  --grey-400: #7d82a0;
+  --grey-500: #626883;
+  --grey-600: #525770;
+  --grey-700: #42475d;
+  --grey-800: #333749;
+  --grey-900: #242835;
+  --grey-950: #161821;
+
+  /* basic palette Light */
+
+  --base-primary-500: #27a108;
+  --base-primary-300: #45d320;
+  --base-primary-50: #c9ff99;
+  --content-primary: #161821;
+  --content-secondary: #626883;
+  --content-tertiary: #9c9fb8;
+  --bg-primary: #ffffff;
+  --bg-secondary: #eff0f6;
+  --stroke-primary: #27a108;
+
+  /* basic palette Dark */
+
+  --dark-content-primary: #ffffff;
+  --dark-content-secondary: #bbbdd0;
+  --dark-content-tertiary: #7d82a0;
+  --dark-bg-primary: #161821;
+  --dark-bg-secondary: #eff0f6;
+  --dark-stroke-primary: #27a108;
+
+  /* component palette Light */
+
+  --primary-button-text: #ffffff;
+  --secondary-button-text: #161821;
+  --secondary-basic-button-bg: #ffffff;
+  --transparent-bg: #ffffff;
+  --ghost-button-text: #161821;
+  --primary-link-text: #27a108;
+  --ghost-link-text: #161821;
+  --primary-outline-button-text: #161821;
+  --text-placeholder: #626883;
+  --text-filled: #161821;
+  --ghost-button-bg-hover: #626883;
+  --ghost-button-bg-grey: #6268831A;
+  --ghost-button-bg: #eff0f6;
+
+  /* component palette Dark */
+
+  --dark-primary-button-text: #ffffff;
+  --dark-secondary-button-text: #161821;
+  --dark-secondary-basic-button-bg: #ffffff;
+  --dark-transparent-bg: #161821;
+  --dark-ghost-button-text: #ffffff;
+  --dark-primary-link-text: #27a108;
+  --dark-ghost-link-text: #ffffff;
+  --dark-primary-outline-button-text: #ffffff;
+  --dark-text-placeholder: #626883;
+  --dark-text-filled: #161821;
+  --dark-ghost-button-bg-hover: #ffffff;
+  --dark-ghost-button-bg: #242835;
+
   @include media.breakpoint(mobile) {
     --content-padding: 2rem;
   }

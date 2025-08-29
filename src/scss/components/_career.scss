@@ -1,0 +1,139 @@
+@use "../media";
+@use "../utils";
+
+.career {
+  @include utils.blockWrapper;
+  background-color: var(--dark-bg-color);
+  color: white;
+  padding-top: 8rem;
+  padding-bottom: 16rem;
+}
+
+.career__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.career__top-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 4.8rem;
+}
+
+.career__bottom-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+}
+
+.career__text-content {
+  grid-column: 10 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.career__secondary-heading {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.career__text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.8rem;
+  margin-top: 1.6rem;
+  b {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-weight: inherit;
+  }
+}
+
+.career__links {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 4rem;
+}
+
+.career__link {
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.career__list {
+  grid-column: 1 / 9;
+  grid-row: 1 / 2;
+  justify-self: flex-end;
+  margin-right: 4.4rem;
+  margin-left: 4.4rem;
+  z-index: 5;
+  display: flex;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+}
+
+.career__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.career__card {
+  display: flex;
+  flex-direction: column;
+  padding: 3.4rem 3rem;
+  border-radius: 4.8rem;
+  background: radial-gradient(
+      188.35% 125.7% at 100% 100%,
+      rgba(117, 223, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.12) 100%
+    ),
+    rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(18.100000381469727px);
+  color: var(--text-color);
+}
+
+.career__card-amount {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.career__card-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+
+.career__image-container {
+  position: relative;
+  border-radius: 4.8rem;
+  overflow: hidden;
+  grid-column: 1 / 9;
+  grid-row: 1 / 2;
+  margin-top: 8.4rem;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 50%;
+  }
+}

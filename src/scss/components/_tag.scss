@@ -1,0 +1,9 @@
+.tag {
+  width: fit-content;
+  display: inline-block;
+  background: var(--base-primary-50);
+  border-radius: var(--corner-radius-m);
+  padding: .4rem 1.2rem;
+  color: var(--content-primary);
+  word-break: keep-all;
+}

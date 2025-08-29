@@ -235,3 +235,7 @@ select:-webkit-autofill:focus {
   overflow-x: hidden;
   overflow-x: clip;
 }
+
+.page-main--dark {
+  background-color: var(--dark-bg-primary);
+}
