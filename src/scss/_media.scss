@@ -26,7 +26,7 @@ $breakpointsMF: (
 }
 
 @function getBreakpointMF($name) {
-  @return map.get($breakpoints, $name);
+  @return map.get($breakpointsMF, $name);
 }
 
 @mixin breakpoint($name) {
