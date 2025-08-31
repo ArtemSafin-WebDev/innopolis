@@ -1,8 +1,11 @@
-import { YMapDefaultMarker } from "@yandex/ymaps3-default-ui-theme";
 import type { YMapLocationRequest } from "ymaps3";
 import "@yandex/ymaps3-default-ui-theme/dist/esm/index.css";
 
 export default async function yandexMaps() {
+  const elements = Array.from(
+    document.querySelectorAll<HTMLElement>(".js-yandex-map")
+  );
+  if (!elements.length) return;
   await ymaps3.ready;
   const {
     YMap,
@@ -10,19 +13,17 @@ export default async function yandexMaps() {
     YMapDefaultFeaturesLayer,
     YMapControls,
   } = ymaps3;
-  const { YMapZoomControl } = await ymaps3.import(
-    "@yandex/ymaps3-controls@0.0.1"
-  );
-
-  const elements = Array.from(
-    document.querySelectorAll<HTMLElement>(".js-yandex-map")
+  const { YMapDefaultMarker, YMapZoomControl } = await import(
+    "@yandex/ymaps3-default-ui-theme"
   );
   elements.forEach((element) => {
-    const lat = Number(element.parentElement?.getAttribute("data-lat"));
-    const lng = Number(element.parentElement?.getAttribute("data-lng"));
-    const zoom = element?.parentElement?.hasAttribute("data-zoom")
-      ? Number(element?.parentElement?.getAttribute("data-zoom"))
+    const lat = Number(element.getAttribute("data-lat"));
+    const lng = Number(element.getAttribute("data-lng"));
+    const zoom = element.hasAttribute("data-zoom")
+      ? Number(element.getAttribute("data-zoom"))
       : 14;
+
+    console.log(lat, lng, zoom);
 
     const LOCATION: YMapLocationRequest = {
       center: [lng, lat],
@@ -35,7 +36,7 @@ export default async function yandexMaps() {
     map.addChild(new YMapDefaultSchemeLayer({}));
     map.addChild(new YMapDefaultFeaturesLayer({ zIndex: 1800 }));
     const controls = new YMapControls({
-      position: "bottom right",
+      position: "top right",
       orientation: "vertical",
     });
     controls.addChild(

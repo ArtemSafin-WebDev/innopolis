@@ -43,12 +43,20 @@ body {
   font-family: var(--montserrat);
 }
 
-body.menu-open,
 body.modal-open {
   touch-action: none;
   -webkit-overflow-scrolling: none;
   overflow: hidden;
   overscroll-behavior: none;
+}
+
+body.menu-open {
+  @include media.breakpoint(mobile) {
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
 }
 
 main {
