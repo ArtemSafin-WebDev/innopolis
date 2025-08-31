@@ -9,6 +9,7 @@ import education from "./education";
 import technologies from "./technologies";
 import products from "./products";
 import menu from "./menu";
+import yandexMaps from "./yandexMaps";
 
 document.addEventListener("DOMContentLoaded", () => {
   science();
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cooperation();
   faculties();
   initTextTruncation();
+  yandexMaps();
 });
 
 window.addEventListener("load", () => {

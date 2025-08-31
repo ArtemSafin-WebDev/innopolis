@@ -8,6 +8,7 @@ import pagesConfig from "./pages.config";
 
 export default {
   build: {
+    target: 'es2022',
     rollupOptions: {
       output: {
         entryFileNames: `assets/[name].js`,
