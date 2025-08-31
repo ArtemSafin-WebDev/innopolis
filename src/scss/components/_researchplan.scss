@@ -1,0 +1,72 @@
+@use "../media";
+@use "../utils";
+
+
+.researchplan {
+  @include utils.blockWrapper;
+  background-color: var(--dark-bg-color);
+  color: white;
+  padding: 8rem 0;
+}
+
+.researchplan__content {
+  @include utils.blockContent;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.researchplan__content__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+
+.researchplan__content__info-title {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 5.4rem;
+}
+
+.researchplan__content__info span {
+  width: 100rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 3.2rem;
+}
+
+.researchplan__content__more-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.researchplan__content__more-info__card {
+  padding: 3.2rem;
+  background-color: #242835;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 4.8rem;
+}
+
+.researchplan__content__more-info__card-number {
+  align-self: flex-start;
+  font-size: 11rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.44rem;
+  background: linear-gradient(180deg, #8ce677 0.03%, #16c600 116.81%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--onest);
+}
+
+.researchplan__content__more-info__card-text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.8rem;
+}

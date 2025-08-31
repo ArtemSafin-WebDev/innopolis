@@ -1,6 +1,9 @@
 import "virtual:svg-icons-register";
 import "../scss/style.scss";
 import science from "./science";
+import cooperation from "./cooperation";
+import faculties from "./faculties";
+import initTextTruncation from "./textTruncation";
 import ticker from "./ticker";
 import education from "./education";
 import technologies from "./technologies";
@@ -14,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
   education();
   technologies();
   menu();
+  cooperation();
+  faculties();
+  initTextTruncation();
 });
 
 window.addEventListener("load", () => {
