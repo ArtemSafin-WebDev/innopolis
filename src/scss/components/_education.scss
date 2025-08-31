@@ -1,0 +1,190 @@
+@use "../media";
+@use "../utils";
+
+.education {
+  background-color: var(--dark-bg-color);
+  color: white;
+  padding-top: 8rem;
+  padding-bottom: 16rem;
+  @include utils.blockWrapper;
+}
+
+.education__content {
+  @include utils.blockContent;
+}
+
+.education__top-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 6.4rem;
+}
+
+.education__bottom-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+}
+
+.education__slider {
+  grid-column: 1 / 5;
+
+  .swiper {
+    overflow: visible;
+  }
+}
+
+.education__program-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.education__program-card-type {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: #bbbdd0;
+}
+
+.education__program-card-title {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin-top: 1rem;
+}
+
+.education__program-card-text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.8rem;
+  margin-top: 3.2rem;
+}
+
+.education__program-card-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 3.2rem;
+  align-items: stretch;
+}
+
+.education__program-card-btn {
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.education__slider-arrows {
+  margin-top: 2.4rem;
+}
+
+.education__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1.6rem;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: dense;
+  grid-column: 6 / -1;
+}
+
+.education__small-card {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 4.8rem;
+  background: #242835;
+  border: 1px solid #242835;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 1.6rem 0.1rem #5ce937 inset;
+    }
+  }
+}
+
+.education__small-card-image-container {
+  flex-shrink: 0;
+  width: 24rem;
+  aspect-ratio: 240 / 124;
+  position: relative;
+  border-radius: 2.4rem;
+  overflow: hidden;
+}
+
+.education__small-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.education__large-card {
+  grid-row: span 3;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 4.8rem;
+  border: 0.2rem solid var(--light-green-color);
+  background: rgba(22, 24, 33, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  padding: 3.2rem;
+  gap: 2rem;
+  grid-column: 2 / 3;
+  background-image: url("../images/education/large-card-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      box-shadow: 0 0 1.6rem 0.1rem #5ce937 inset;
+    }
+  }
+}
+
+.education__large-card-arrow {
+  margin-left: auto;
+  margin-top: auto;
+  display: grid;
+  place-items: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: var(--light-green-color);
+  flex-shrink: 0;
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: white;
+  }
+}

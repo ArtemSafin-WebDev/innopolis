@@ -1,0 +1,25 @@
+.secondary-heading {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--grey-text-color);
+  gap: 0.8rem;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    display: block;
+    background-color: var(--primary-color);
+  }
+
+  &--dark {
+    color: #7d82a0;
+  }
+}
