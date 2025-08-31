@@ -1,11 +1,17 @@
 import "virtual:svg-icons-register";
 import "../scss/style.scss";
 import science from "./science";
-import product from "./product";
+import ticker from "./ticker";
+import education from "./education";
+import technologies from "./technologies";
+import products from "./products";
 
 document.addEventListener("DOMContentLoaded", () => {
   science();
-  product();
+  ticker();
+  products();
+  education();
+  technologies();
 });
 
 window.addEventListener("load", () => {
