@@ -4,8 +4,13 @@
             <img src="/images/logo.svg" alt="Лого" class="page-header__logo-image">
         </a>
         <div class="page-header__btns">
-            <a href="#" class="btn btn--small btn--white page-header__btn">
-                Меню
+            <a href="#" class="btn btn--small btn--white page-header__btn page-header__btn--menu js-menu-toggle-btn">
+                <span>
+                    Меню
+                </span>
+                <span>
+                    Закрыть
+                </span>
             </a>
             <a href="#" class="btn btn--small btn--white page-header__btn">
                 EN
@@ -20,4 +25,5 @@
             Войти
         </a>
     </div>
+    {{> menu }}
 </header>

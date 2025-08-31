@@ -26,15 +26,8 @@
   svg {
     fill: currentColor;
     flex-shrink: 0;
-    &.icon-arrow-right {
-      width: 2.4rem;
-      height: 2.4rem;
-    }
-
-    &.icon-eye {
-      width: 2.4rem;
-      height: 2.4rem;
-    }
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   &--small {
@@ -43,6 +36,15 @@
     font-weight: 600;
     line-height: 2.4rem;
     padding: 1.4rem 2rem;
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+
+      &.icon-eye {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
   }
 
   &--large {
