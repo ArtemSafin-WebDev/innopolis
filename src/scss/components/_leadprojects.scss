@@ -1,5 +1,6 @@
-@use "media";
-@use "utils";
+@use "../media";
+@use "../utils";
+
 
 .leadprojects {
   @include utils.blockWrapper;
