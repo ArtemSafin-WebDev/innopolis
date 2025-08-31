@@ -1,0 +1,78 @@
+@use "../media";
+
+.article-card {
+  height: min-content;
+  min-height: 40rem;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+  flex: 1 1 29rem;
+  display: flex !important;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.05);
+}
+
+.article-card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 1.2rem;
+  object-fit: cover;
+}
+
+.article-card__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.article-card__desc {
+  font-size: 1.6rem;
+  color: #333;
+  flex-grow: 1;
+}
+
+.article-card__date {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--content-primary);
+}
+
+.article-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.article-card__list {
+  --gap: 2.4rem;
+  --cols: 4;
+  --card-min: 43.2rem; // минимальная ширина карточки
+  --card-max: 43.2rem; // максимальная ширина карточки
+  /* Флюидная ширина карточки — растёт с экраном, но в пределах min/max */
+  --card-w: clamp(var(--card-min), 20vw, var(--card-max));
+
+  display: grid;
+  gap: var(--gap);
+  justify-content: start;
+  grid-template-columns: repeat(var(--cols), var(--card-w));
+  max-width: calc(var(--cols) * var(--card-w) + (var(--cols) - 1) * var(--gap));
+}
+
+@include media.breakpoint(tablet) {
+  .article-card__list {
+    --cols: 3;
+    --card-min: 32rem;
+  }
+}
+@include media.breakpoint(small-tablet) {
+  .article-card__list {
+    --cols: 2;
+  }
+}
+@include media.breakpoint(mobile) {
+  .article-card__list {
+    --cols: 1;
+  }
+}

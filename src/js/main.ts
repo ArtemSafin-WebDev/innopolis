@@ -4,10 +4,12 @@ import science from "./science";
 import ticker from "./ticker";
 import education from "./education";
 import technologies from "./technologies";
+import products from "./products";
 
 document.addEventListener("DOMContentLoaded", () => {
   science();
   ticker();
+  products();
   education();
   technologies();
 });

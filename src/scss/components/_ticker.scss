@@ -1,5 +1,5 @@
-@use "media";
-@use "utils";
+@use "../media";
+@use "../utils";
 
 .ticker {
   background-color: var(--dark-bg-color);

@@ -1,0 +1,44 @@
+@use "../utils";
+
+.products {
+  @include utils.blockWrapper;
+  user-select: none;
+  background-color: var(--bg-secondary);
+  padding: 8rem 6rem;
+  overflow: hidden;
+}
+
+.products__content {
+  @include utils.blockContent;
+}
+
+.products__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.products__controls > .swiper-button-lock,
+.products__controls > .swiper-button-disabled {
+  opacity: 0.5;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.products__slide {
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  transition-property: transform;
+  margin-right: 2.4rem;
+}
+
+.products__swiper {
+  overflow: hidden;
+}
+
+.products__swiper > .article-card {
+  min-height: 49rem;
+}
