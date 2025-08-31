@@ -1,0 +1,28 @@
+@use "media";
+@use "utils";
+
+.widepub {
+  @include utils.blockWrapper;
+
+  padding: 12rem 0 4rem;
+}
+
+.widepub__content {
+  @include utils.blockContent;
+}
+
+.widepub .science__secondary-heading {
+  font-size: 4rem;
+  line-height: 5.4rem;
+}
+
+.widepub .science__pub {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.widepub .swiper-slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
