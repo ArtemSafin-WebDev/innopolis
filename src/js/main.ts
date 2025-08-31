@@ -4,10 +4,18 @@ import science from "./science";
 import cooperation from "./cooperation";
 import faculties from "./faculties";
 import initTextTruncation from "./textTruncation";
+import ticker from "./ticker";
+import education from "./education";
+import technologies from "./technologies";
+import products from "./products";
 
 document.addEventListener("DOMContentLoaded", () => {
   science();
-  cooperation();
+  ticker();
+  products();
+  education();
+  technologies();
+   cooperation();
   faculties();
   initTextTruncation();
 });

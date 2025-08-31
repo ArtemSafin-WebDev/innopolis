@@ -1,0 +1,41 @@
+@use "../media";
+@use "../utils";
+
+.page-header {
+  @include utils.blockWrapper;
+  background-color: var(--dark-bg-color);
+  color: white;
+  position: relative;
+  z-index: 100;
+}
+
+.page-header__content {
+  @include utils.blockContent;
+  min-height: var(--header-height, 0);
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+}
+
+.page-header__btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.page-header__btn {
+  align-self: center;
+}
+
+.page-header__login-btn {
+  margin-left: auto;
+}
+
+.page-header__logo {
+  flex-shrink: 0;
+}
+
+.page-header__logo-image {
+  display: block;
+  height: auto;
+  width: 17.2rem;
+}

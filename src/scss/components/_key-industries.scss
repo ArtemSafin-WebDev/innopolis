@@ -1,0 +1,100 @@
+@use '../utils';
+
+.key-industries {
+  @include utils.blockWrapper;
+  background-color: var(--bg-secondary);
+  border-top-right-radius: var(--corner-radius-xl);
+  border-top-left-radius: var(--corner-radius-xl);
+  padding: 8rem 6rem;
+}
+
+.key-industries__content {
+  @include utils.blockContent;
+  box-sizing: border-box;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.key-industries__header {
+  flex: 0 0 calc((100% - 2.4rem) * 4 / 12);
+  max-width: calc((100% - 2.4rem) * 4 / 12);
+}
+
+.key-industries__title {
+  color: var(--content-primary);
+  margin: 0 0 2.4rem;
+}
+
+.key-industries__description {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  margin: 0;
+}
+
+.key-industries__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.4rem;
+
+  flex: 0 0 calc((100% - 2.4rem) * 8 / 12);
+  max-width: calc((100% - 2.4rem) * 8 / 12);
+
+  @media (max-width: 64rem) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.key-industries__card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  gap: 2.4rem;
+
+  padding: 3.2rem;
+  min-height: 1.4rem;
+
+  background: var(--dark-content-primary);
+  border-radius: var(--corner-radius-l);
+
+  &:hover {
+    background-color: var(--hover-indigo-blue);
+    color: var(--dark-content-primary);
+
+    .key-industries__button {
+      color: var(--secondary-button-text);
+      background: var(--dark-content-primary);
+    }
+
+    .key-industries__icon {
+      opacity: 1;
+    }
+  }
+}
+
+.key-industries__icon {
+  opacity: 0;
+}
+
+.key-industries__card--indigo-blue:hover {
+  background-color: var(--hover-indigo-blue);
+}
+.key-industries__card--lime-green:hover {
+  background-color: var(--hover-lime-green);
+}
+.key-industries__card--sky-blue:hover {
+  background-color: var(--hover-sky-blue);
+}
+.key-industries__card--orange:hover {
+  background-color: var(--hover-orange);
+}
+.key-industries__card--purple:hover {
+  background-color: var(--hover-purple);
+}
+.key-industries__card--teal:hover {
+  background-color: var(--hover-teal);
+}
+.key-industries__card--yellow:hover {
+  background-color: var(--hover-yellow);
+}
