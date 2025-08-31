@@ -24,7 +24,7 @@ export default function initTextTruncation(): void {
   };
 
   // Обрабатываем описания новостей
-  Object.entries(textConfig).forEach(([type, config]) => {
+  Object.entries(textConfig).forEach(([, config]) => {
     const elements = document.querySelectorAll<HTMLElement>(config.selector);
 
     if (elements.length === 0) return;
@@ -40,7 +40,6 @@ export default function initTextTruncation(): void {
 
       // Обрезаем текст если он слишком длинный
       if (originalText.length > config.maxLength) {
-
         // Сначала сохраняем оригинальный текст в data-атрибут
         element.setAttribute("data-original-text", originalText);
 
@@ -53,7 +52,6 @@ export default function initTextTruncation(): void {
 
         // Добавляем класс для стилизации
         element.classList.add("text-truncated");
-
       }
     });
   });
