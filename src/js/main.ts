@@ -8,6 +8,9 @@ import ticker from "./ticker";
 import education from "./education";
 import technologies from "./technologies";
 import products from "./products";
+import menu from "./menu";
+import yandexMaps from "./yandexMaps";
+import promo from "./promo";
 
 document.addEventListener("DOMContentLoaded", () => {
   science();
@@ -15,9 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
   products();
   education();
   technologies();
-   cooperation();
+  menu();
+  cooperation();
   faculties();
   initTextTruncation();
+  yandexMaps();
+  promo();
 });
 
 window.addEventListener("load", () => {

@@ -39,6 +39,9 @@
   .swiper {
     margin: 0;
     width: 100%;
+  }
+
+  .swiper.swiper-initialized {
     overflow: visible;
   }
 }
@@ -48,7 +51,7 @@
   width: 40%;
   margin: 0 auto;
 
-  .swiper {
+  .swiper.swiper-initialized {
     overflow: visible;
   }
 

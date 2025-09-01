@@ -8,6 +8,7 @@ import pagesConfig from "./pages.config";
 
 export default {
   build: {
+    target: "es2022",
     rollupOptions: {
       output: {
         entryFileNames: `assets/[name].js`,
@@ -15,6 +16,14 @@ export default {
         assetFileNames: `assets/[name].[ext]`,
       },
       input: glob.sync("*.html").map((file) => path.resolve(__dirname, file)),
+    },
+  },
+  esbuild: {
+    target: "es2022",
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: "es2022",
     },
   },
   server: {

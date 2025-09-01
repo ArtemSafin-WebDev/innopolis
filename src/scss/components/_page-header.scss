@@ -26,12 +26,37 @@
   align-self: center;
 }
 
+.page-header__btn--menu {
+  position: relative;
+  z-index: 80;
+
+  span {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  .menu-open & {
+    span {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: inline;
+      }
+    }
+  }
+}
+
 .page-header__login-btn {
   margin-left: auto;
 }
 
 .page-header__logo {
   flex-shrink: 0;
+  position: relative;
+  z-index: 80;
 }
 
 .page-header__logo-image {
