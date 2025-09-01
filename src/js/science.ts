@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function science() {
   const elements = Array.from(
-    document.querySelectorAll<HTMLElement>(".science")
+    document.querySelectorAll<HTMLElement>(".science, .widepub")
   );
   elements.forEach((element) => {
     const pubSlider = element.querySelector<HTMLElement>(

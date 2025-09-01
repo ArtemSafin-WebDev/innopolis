@@ -13,6 +13,7 @@
     "@types/node": "^20.7.0",
     "@types/postcss-preset-env": "^8.0.0",
     "@types/validator": "^13.11.1",
+    "@yandex/ymaps3-types": "^1.0.17305052",
     "fast-glob": "^3.3.3",
     "glob": "^11.0.1",
     "sass": "^1.86.0",
@@ -22,6 +23,7 @@
     "vite-plugin-svg-icons": "^2.0.1"
   },
   "dependencies": {
+    "@yandex/ymaps3-default-ui-theme": "^0.0.19",
     "gsap": "^3.13.0",
     "inputmask": "^5.0.9",
     "swiper": "^11.2.10",

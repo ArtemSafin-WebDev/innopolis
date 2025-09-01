@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2022",
+    "target": "esnext",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["es2022", "dom", "dom.iterable"],
+    "lib": ["ESNext", "dom", "dom.iterable"],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -15,9 +15,13 @@
     "sourceMap": true,
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "ymaps3": ["./node_modules/@yandex/ymaps3-types"]
+    },
+    "typeRoots": ["./node_modules/@yandex/ymaps3-types"]
   },
   "include": ["src"]
 }

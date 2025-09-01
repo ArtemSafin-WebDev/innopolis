@@ -11,10 +11,7 @@
   justify-content: center;
   user-select: none;
   color: white;
-  transition:
-    background-color 0.2s,
-    color 0.2s,
-    border-color 0.2s,
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
     box-shadow 0.2s;
   background-color: var(--primary-color);
   border-radius: 8rem;
@@ -29,9 +26,24 @@
   svg {
     fill: currentColor;
     flex-shrink: 0;
-    &.icon-arrow-right {
-      width: 2.4rem;
-      height: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  &--small {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.4rem;
+    padding: 1.4rem 2rem;
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+
+      &.icon-eye {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
     }
   }
 
