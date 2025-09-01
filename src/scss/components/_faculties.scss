@@ -1,7 +1,6 @@
 @use "../media";
 @use "../utils";
 
-
 .faculties {
   @include utils.blockWrapper;
   background-color: var(--white);
@@ -63,7 +62,7 @@
   color: #626883;
 }
 
-.faculties__content__faculty__dean__info__email {
+.faculties__content__faculty__dean__info .faculties__content__faculty__dean__info__email  {
   color: var(--primary-color);
 }
 
