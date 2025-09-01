@@ -1,0 +1,25 @@
+@use "../utils";
+
+.vacancies {
+  @include utils.blockWrapper;
+  padding: 8rem 6rem;
+  background-color: var(--bg-secondary);
+}
+
+.vacancies__container {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.vacancies__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.vacancies__btn {
+  min-width: 200px;
+}

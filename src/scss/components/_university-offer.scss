@@ -1,0 +1,96 @@
+@use "../utils";
+
+.university-offer {
+  @include utils.blockWrapper;
+  background-color: var(--bg-secondary);
+  padding: 8rem 6rem;
+}
+
+.university-offer__container {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.university-offer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(0, auto);
+  gap: 1.6rem;
+}
+
+.university-offer__card {
+  background-color: var(--white);
+  border-radius: var(--corner-radius-l);
+  padding: 3.2rem;
+}
+
+.university-offer__card-title {
+  margin-bottom: 2.4rem;
+}
+
+.university-offer__list {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.university-offer__list-item {
+  position: relative;
+  padding-left: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.university-offer__list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: var(--green-500);
+  border-radius: 1px;
+}
+
+.university-offer__relocation {
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: 1fr;
+  background-color: var(--white);
+  border-radius: var(--corner-radius-l);
+  padding: 3.2rem;
+  gap: 2.4rem;
+}
+
+.university-offer__relocation-figure {
+  border-radius: var(--corner-radius-l);
+  overflow: hidden;
+  line-height: 0;
+  margin: 0;
+}
+
+.university-offer__relocation-image {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.university-offer__relocation-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.university-offer__relocation-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.university-offer__relocation-title {
+  line-height: 100%;
+}

@@ -1,0 +1,88 @@
+@use "../utils";
+
+.work-areas {
+  @include utils.blockWrapper;
+  background-color: var(--bg-secondary);
+  padding: 8rem 6rem;
+}
+
+.work-areas__container {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.work-areas__list {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: minmax(23.8rem, auto);
+}
+
+.work-areas__list-item {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-areas__card {
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem;
+  border-radius: 4.8rem;
+  background-color: var(--bg-primary);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  flex-grow: 1;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--green-400);
+
+      .work-areas__card-title {
+        color: var(--dark-content-primary);
+      }
+
+      .work-areas__card-arrow {
+        background-color: var(--dark-content-primary);
+      }
+
+      .work-areas__card-arrow svg {
+        fill: var(--green-400);
+      }
+    }
+  }
+}
+
+.work-areas__card-title {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--content-primary);
+}
+
+.work-areas__card-arrow {
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-top: auto;
+  border-radius: 50%;
+  background: var(--light-green-color);
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: white;
+  }
+}

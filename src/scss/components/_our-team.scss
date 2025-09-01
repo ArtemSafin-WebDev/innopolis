@@ -1,0 +1,43 @@
+@use "../utils";
+
+.our-team {
+  @include utils.blockWrapper;
+  background-color: var(--dark-bg-primary);
+  border-bottom-left-radius: var(--corner-radius-xl);
+  border-bottom-right-radius: var(--corner-radius-xl);
+  color: var(--white);
+  padding: 8rem 6rem;
+}
+
+.our-team__container {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.our-team__controls {
+  display: flex;
+  gap: 8px;
+}
+
+.our-team__list.swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.our-team__list.swiper-wrapper > .swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.our-team__card {
+  padding: 3.2rem;
+  background-color: var(--grey-900);
+  border-radius: var(--corner-radius-l);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  height: 100%;
+}
