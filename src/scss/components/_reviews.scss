@@ -1,0 +1,49 @@
+@use "../media";
+@use "../utils";
+
+.reviews {
+  @include utils.blockWrapper;
+  padding: 8rem 0;
+}
+
+.reviews__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.reviews__top-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  align-items: center;
+}
+
+.reviews__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+
+.reviews__slider {
+  display: flex;
+  flex-direction: column;
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+    width: calc(33.33% - 2.4rem * 2 / 3);
+    margin-right: 2.4rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.reviews__slider-arrows {
+  margin-top: 2.4rem;
+}

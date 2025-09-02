@@ -6,6 +6,10 @@
   padding-top: 8rem;
   padding-bottom: 16rem;
   background-color: var(--grey-color);
+
+  &--our-events {
+    padding-bottom: 8rem;
+  }
 }
 
 .events__content {
@@ -61,6 +65,10 @@
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
   transition: box-shadow 0.2s, border-color 0.2s;
   gap: 0.8rem;
+
+  & > *:not(.events__card-image-container) {
+    margin-bottom: auto;
+  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -129,8 +137,8 @@
   position: relative;
   border-radius: 2.4rem;
   overflow: hidden;
-  aspect-ratio: 824 / 476;
-  margin-top: auto;
+  aspect-ratio: 824 / 356;
+  margin-top: 2.4rem;
   img {
     position: absolute;
     left: 0;
@@ -138,5 +146,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .events--our-events & {
+    aspect-ratio: 824 / 412;
   }
 }

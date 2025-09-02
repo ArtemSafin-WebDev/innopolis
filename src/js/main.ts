@@ -14,6 +14,11 @@ import promo from "./promo";
 import corporateLife from "./corporateLife";
 import ourTeam from "./ourTeam";
 import vacancies from "./vacancies";
+import accordions from "./accordions";
+import reviews from "./reviews";
+import tabs from "./tabs";
+import stages from "./stages";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   science();
@@ -30,6 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
   corporateLife();
   ourTeam();
   vacancies();
+  accordions();
+  tabs();
+  reviews();
+  stages();
 });
 
 window.addEventListener("load", () => {
