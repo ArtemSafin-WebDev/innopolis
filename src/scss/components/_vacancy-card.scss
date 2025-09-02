@@ -1,0 +1,42 @@
+.vacancy-card {
+  background-color: var(--white);
+  border-radius: var(--corner-radius-l);
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 13.2rem;
+}
+
+.vacancy-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.vacancy-card__footer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1.6rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: auto;
+}
+
+.vacancy-card__price {
+  grid-column: span 2;
+}
+
+.vacancy-card__btn {
+  grid-column: span 1;
+  font-size: 1.4rem;
+}
+
+.vacancy-card__date {
+  width: 100%;
+  grid-column: span 1;
+  align-self: center;
+  line-height: 100%;
+  text-align: right;
+  font-weight: 500;
+  font-size: 16px;
+}

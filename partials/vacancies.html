@@ -1,0 +1,48 @@
+<div class="vacancies">
+  <div class="vacancies__container">
+
+    <header class="block-title__container">
+      <h3 class='block-title title_2xl'>Вакансии</h3>
+
+      <a href="#" class="vacancies__btn btn btn--white">Все вакансии</a>
+    </header>
+
+    <div class="vacancies__slider">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            {{> vacancy-card }}
+          </div>
+          <div class="swiper-slide">
+            {{> vacancy-card }}
+          </div>
+          <div class="swiper-slide">
+            {{> vacancy-card }}
+          </div>
+          <div class="swiper-slide">
+            {{> vacancy-card }}
+          </div>
+          <div class="swiper-slide">
+            {{> vacancy-card }}
+          </div>
+          <div class="swiper-slide">
+            {{> vacancy-card }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vacancies__controls">
+      <button class="vacancies__control-prev btn--circle btn--grey">
+        <svg width="16" height="16" aria-hidden="true">
+          <use xlink:href="#chevron-left"></use>
+        </svg>
+      </button>
+      <button class="vacancies__control-next btn--circle btn--grey">
+        <svg width="16" height="16" aria-hidden="true">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</div>

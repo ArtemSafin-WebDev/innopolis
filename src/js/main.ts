@@ -11,10 +11,14 @@ import products from "./products";
 import menu from "./menu";
 import yandexMaps from "./yandexMaps";
 import promo from "./promo";
+import corporateLife from "./corporateLife";
+import ourTeam from "./ourTeam";
+import vacancies from "./vacancies";
 import accordions from "./accordions";
 import reviews from "./reviews";
 import tabs from "./tabs";
 import stages from "./stages";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   science();
@@ -28,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initTextTruncation();
   yandexMaps();
   promo();
+  corporateLife();
+  ourTeam();
+  vacancies();
   accordions();
   tabs();
   reviews();
