@@ -1,0 +1,117 @@
+@use "../media";
+@use "../utils";
+
+.program-intro {
+  @include utils.blockWrapper;
+  position: relative;
+  z-index: 2;
+  border-bottom-left-radius: 8rem;
+  border-bottom-right-radius: 8rem;
+  background: #161821;
+  color: white;
+  background-image: url("../images/program-intro-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 0.8rem;
+}
+
+.program-intro__content {
+  @include utils.blockContent;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  grid-row-gap: 8rem;
+}
+
+.program-intro__breadcrumbs {
+  grid-column: 1 / -1;
+}
+
+.program-intro__wrapper {
+  grid-column: 3 / 11;
+  border-top-left-radius: 8rem;
+  border-top-right-radius: 8rem;
+  background: #161821;
+  box-shadow: 0 0.4rem 4.55rem 0 rgba(185, 243, 67, 0.25) inset;
+  padding: 8rem 6rem;
+  min-height: 93.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  background-image: url("../images/program-intro-wrapper-blur.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.program-intro__list {
+  grid-column: 1 / -1;
+  margin-bottom: 12rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+}
+
+.program-intro__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.program-intro__card-key {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: #bbbdd0;
+}
+
+.program-intro__card-value {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.program-intro__slogan {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  grid-column: 1 / -1;
+  margin-bottom: -0.8rem;
+
+  img {
+    width: 10.2929rem;
+    height: 3.6rem;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4rem;
+
+    &:first-of-type {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.program-intro__main-heading {
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 1.6rem;
+}
+
+.program-intro__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-self: flex-end;
+}
+
+.program-intro__btn {
+  justify-content: space-between;
+  align-self: stretch;
+}

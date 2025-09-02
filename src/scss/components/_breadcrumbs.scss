@@ -1,0 +1,45 @@
+@use "../media";
+@use "../utils";
+
+.breadcrumbs {
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.breadcrumbs__link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #bbbdd0;
+  &:link,
+  &:visited {
+    color: #bbbdd0;
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: #6c757d;
+    position: relative;
+    bottom: -0.08rem;
+  }
+
+  &.active {
+    cursor: default;
+    color: rgba(#bbbdd0, 0.6);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:not(.active):hover {
+      color: var(--primary-color);
+    }
+  }
+}
