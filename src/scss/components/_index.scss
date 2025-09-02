@@ -5,6 +5,7 @@
 @use "accordion";
 @use "breadcrumbs";
 @use "review-video-card";
+@use "review-text-card";
 @use "tabs-nav";
 @use "tabs-items";
 @use "subject-card";
@@ -50,3 +51,6 @@
 @use "subjects";
 @use "stages";
 @use "program-intro";
+@use "channel";
+@use "one-plus-one";
+@use "master-apply";
