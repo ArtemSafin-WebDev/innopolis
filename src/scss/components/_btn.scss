@@ -28,6 +28,9 @@
     flex-shrink: 0;
     width: 2.4rem;
     height: 2.4rem;
+
+    width: 2rem;
+    height: 2rem;
   }
 
   &--small {
@@ -53,6 +56,10 @@
     font-weight: 600;
     line-height: 120%;
     padding: 2.5rem 3.2rem;
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 
   &--dark-with-green-outline {

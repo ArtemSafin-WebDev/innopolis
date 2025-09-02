@@ -1,0 +1,50 @@
+@use "../media";
+@use "../utils";
+
+.preliminary {
+  @include utils.blockWrapper;
+  padding: 2.4rem 0;
+
+  &:has(~ .employment) {
+    padding-bottom: 6rem;
+  }
+}
+
+.preliminary__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.preliminary__card {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  justify-content: space-between;
+  min-height: 21.8rem;
+  padding: 3rem 8rem;
+  border-radius: 8rem;
+  color: var(--text-color);
+  background: #45d320;
+  background-image: url("../images/preliminary-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.preliminary__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.preliminary__text {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.preliminary__btn {
+  align-self: center;
+}

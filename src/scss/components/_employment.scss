@@ -1,0 +1,56 @@
+@use "../media";
+@use "../utils";
+
+.employment {
+  @include utils.blockWrapper;
+  padding: 8rem 0;
+}
+
+.employment__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.employment__top-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  grid-gap: 2.4rem;
+  margin-bottom: 8rem;
+}
+
+.employment__text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.8rem;
+}
+
+.employment__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7rem;
+}
+
+.employment__list-item {
+  width: 15rem;
+  flex-shrink: 0;
+}
+
+.employment__card {
+  width: 100%;
+  aspect-ratio: 150 / 50;
+  position: relative;
+}
+
+.employment__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

@@ -11,6 +11,10 @@ import products from "./products";
 import menu from "./menu";
 import yandexMaps from "./yandexMaps";
 import promo from "./promo";
+import accordions from "./accordions";
+import reviews from "./reviews";
+import tabs from "./tabs";
+import stages from "./stages";
 
 document.addEventListener("DOMContentLoaded", () => {
   science();
@@ -24,6 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initTextTruncation();
   yandexMaps();
   promo();
+  accordions();
+  tabs();
+  reviews();
+  stages();
 });
 
 window.addEventListener("load", () => {
