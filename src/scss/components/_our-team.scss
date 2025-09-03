@@ -21,6 +21,12 @@
   gap: 8px;
 }
 
+.our-team__control-prev,
+.our-team__control-next {
+  width: 5.2rem;
+  height: 5.2rem;
+}
+
 .our-team__list.swiper-wrapper {
   display: flex;
   align-items: stretch;
