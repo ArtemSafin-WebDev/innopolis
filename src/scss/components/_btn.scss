@@ -148,6 +148,21 @@
     }
   }
 
+  &--dark-ghost {
+    background-color: var(--dark-ghost-button-bg);
+
+    &:disabled {
+      background-color: transparent;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:not(:disabled):hover {
+        box-shadow: 0 0 1rem 0.1rem var(--green-200) inset;
+        border-color: var(--primary-color);
+      }
+    }
+  }
+
   &--circle {
     padding: 1.8rem;
     border-radius: 50%;
