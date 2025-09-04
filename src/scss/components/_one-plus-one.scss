@@ -1,0 +1,40 @@
+@use "../media";
+@use "../utils";
+
+.one-plus-one {
+  @include utils.blockWrapper;
+  padding: 8rem 0;
+}
+
+.one-plus-one__content {
+  @include utils.blockContent;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+}
+
+.one-plus-one__block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.one-plus-one__block-heading {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.one-plus-one__block-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+  p {
+    margin-top: 1.6rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

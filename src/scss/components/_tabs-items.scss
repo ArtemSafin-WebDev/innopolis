@@ -1,0 +1,26 @@
+@use "../media";
+@use "../utils";
+
+.tabs-items {
+  position: relative;
+}
+
+.tabs-item__item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+    position: relative;
+    z-index: 10;
+  }
+}

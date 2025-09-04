@@ -1,0 +1,136 @@
+@use "../media";
+@use "../utils";
+
+.accordion {
+  border-radius: 2.4rem;
+  background: white;
+  border: 1px solid white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 1rem 0.1rem #5ce937 inset;
+    }
+  }
+}
+
+.accordion__btn {
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3.2rem;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.accordion__btn-icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    background-color: #626883;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 0.5rem;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .accordion.active & {
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+    }
+  }
+}
+
+.accordion__dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+
+  .accordion.active & {
+    grid-template-rows: 1fr;
+  }
+}
+
+.accordion__dropdown-inner {
+  grid-row: 1 / 2;
+  overflow: hidden;
+}
+
+.accordion__content {
+  padding: 3.2rem;
+  padding-top: 0;
+}
+
+.accordion__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4rem;
+  padding: 1rem;
+  padding-top: 0;
+
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 1px;
+    transition: text-decoration-color 0.2s;
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration-color: transparent;
+      }
+    }
+  }
+
+  p {
+    margin-top: 1.2rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    margin-top: 1.2rem;
+
+    & > li {
+      position: relative;
+      padding-left: 2.4rem;
+      &::before {
+        content: "";
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: currentColor;
+        position: absolute;
+        left: 1rem;
+        top: 0.75em;
+        transform: translateY(-50%);
+      }
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

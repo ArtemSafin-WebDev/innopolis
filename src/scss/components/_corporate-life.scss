@@ -1,0 +1,71 @@
+@use "../utils";
+
+.corporate-life {
+  @include utils.blockWrapper;
+  padding: 8rem 6rem;
+  background-color: var(--dark-bg-primary);
+  border-top-left-radius: var(--corner-radius-xl);
+  border-top-right-radius: var(--corner-radius-xl);
+  color: var(--white);
+}
+
+.corporate-life__container {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.corporate-life__content {
+  display: grid;
+  grid-template-columns: .8fr 1fr;
+  justify-content: space-between;
+  gap: 17.6rem;
+}
+
+.corporate-life__left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 58.5rem;
+  gap: 4.8rem;
+}
+
+.corporate-life__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.corporate-life__item-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.corporate-life__slider {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 2.4rem;
+}
+
+.corporate-life__slider .swiper-slide {
+  width: 100% !important;
+  height: auto !important;
+
+  & > img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--corner-radius-l);
+    object-fit: cover;
+  }
+}
+
+.corporate-life__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
