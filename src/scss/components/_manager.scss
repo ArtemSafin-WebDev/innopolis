@@ -12,6 +12,18 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 2.4rem;
+
+  &.multi-manager {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+
+    & .manager__content__manager {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-gap: 2.4rem;
+    }
+  }
 }
 
 .manager__info {

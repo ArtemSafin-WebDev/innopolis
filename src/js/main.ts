@@ -18,6 +18,7 @@ import accordions from "./accordions";
 import reviews from "./reviews";
 import tabs from "./tabs";
 import stages from "./stages";
+import SubjectLanguage from "./subject";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   tabs();
   reviews();
   stages();
+  SubjectLanguage();
 });
 
 window.addEventListener("load", () => {

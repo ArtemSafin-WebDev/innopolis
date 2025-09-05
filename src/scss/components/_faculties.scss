@@ -22,15 +22,10 @@
   gap: 2.4rem;
 }
 
-.faculties__content__faculty__title {
-  font-size: 4rem;
-  font-weight: 600;
-  line-height: 5.4rem;
-}
-
 .faculties__content__faculty__dean {
   position: relative;
   display: flex;
+  align-items: center;
   gap: 1.2rem;
 }
 
@@ -62,7 +57,8 @@
   color: #626883;
 }
 
-.faculties__content__faculty__dean__info .faculties__content__faculty__dean__info__email  {
+.faculties__content__faculty__dean__info
+  .faculties__content__faculty__dean__info__email {
   color: var(--primary-color);
 }
 
@@ -109,17 +105,10 @@
 }
 
 .faculties__content__faculty__labs-item__supervisor__title {
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1;
-  color: #626883;
+  color: var(--grey-500);
 }
 
-.faculties__content__faculty__labs-item__supervisor__name {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 2.4rem;
-}
+
 
 .faculties__content__faculty__multy-university-labs {
   display: flex;
