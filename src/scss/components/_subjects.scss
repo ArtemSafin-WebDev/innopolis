@@ -56,13 +56,61 @@
   }
 }
 
+.subject__languages {
+  margin-bottom: 4rem;
+  display: flex;
+  border-bottom: 1px solid var(--grey-100);
+}
+
+.subject__languages-item {
+  padding: 1.2rem 2.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &.active {
+    color: var(--base-primary-500);
+    border-bottom: 2px solid var(--base-primary-500);
+  }
+
+  &:hover:not(.active) {
+    color: var(--base-primary-500);
+  }
+}
+
 .subjects__list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2.4rem;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .subjects__list-item {
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+// Анимация появления карточек с задержкой для каждой
+.subjects__list-item:nth-child(1) { animation-delay: 0.1s; }
+.subjects__list-item:nth-child(2) { animation-delay: 0.2s; }
+.subjects__list-item:nth-child(3) { animation-delay: 0.3s; }
+.subjects__list-item:nth-child(4) { animation-delay: 0.4s; }
+.subjects__list-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

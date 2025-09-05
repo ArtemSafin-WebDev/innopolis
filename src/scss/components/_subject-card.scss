@@ -161,4 +161,12 @@
   &--lightgreen {
     background: #3fbc1f;
   }
+
+  &--blue {
+    background-color: #0076d0;
+  }
+
+  &--grey {
+    background-color: var(--grey-500);
+  }
 }
