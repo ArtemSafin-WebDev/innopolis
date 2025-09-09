@@ -187,6 +187,12 @@ textarea.write-us__form-input {
   border-radius: 2.4rem;
 }
 
+.write-us__form-input--dark,
+textarea.write-us__form-input--dark {
+  border-color: var(--grey-800);
+  background-color: var(--grey-900);
+}
+
 .write-us__form-policy {
   font-size: 1.2rem;
   font-style: normal;
@@ -200,7 +206,9 @@ textarea.write-us__form-input {
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.5px;
     text-underline-offset: 1px;
-    transition: color 0.2s, text-decoration-color 0.2s;
+    transition:
+      color 0.2s,
+      text-decoration-color 0.2s;
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
@@ -212,4 +220,60 @@ textarea.write-us__form-input {
 
 .write-us__form-submit {
   margin-top: 2.4rem;
+}
+
+.write-us__upload {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.write-us__file-input {
+  position: absolute;
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+}
+
+.write-us__file-label {
+  gap: 1.2rem;
+  padding: 14px 20px;
+}
+
+.write-us__hint {
+  color: var(--content-secondary);
+}
+
+.write-us__fieldset {
+  display: flex;
+  gap: 16px;
+  border: 0;
+  padding: 0;
+}
+
+.write-us__fieldset--switch .write-us__switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.write-us__radio {
+  appearance: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: 2px solid var(--dark-content-tertiary);
+  background-color: var(--bg-primary);
+  margin: 0;
+}
+
+.write-us__radio:checked {
+  position: relative;
+  border: 4px solid var(--base-primary-500);
+}
+
+.write-us__switch:has(.write-us__radio:checked) {
+  box-shadow: inset 0 0 0 2px var(--accent);
 }

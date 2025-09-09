@@ -22,21 +22,24 @@
       <form action="/" method="POST" class="write-us__form">
         <div class="write-us__form-fields">
           <div class="write-us__form-field">
-            <label for="privatePerson">
-              <input type="radio" name="privatePerson" id="privatePerson">
-              Частное лицо
-            </label>
-            <label for="Organization">
-              <input type="radio" name="Organization" id="Organization">
-              Организация
-            </label>
+            <fieldset class="write-us__fieldset write-us__fieldset--switch">
+              <label class="write-us__switch">
+                <input class="write-us__radio" type="radio" name="applicant_type" value="person" checked />
+                <span class="write-us__switch-text text-base--m">Частное лицо </span>
+              </label>
+
+              <label class="write-us__switch">
+                <input class="write-us__radio" type="radio" name="applicant_type" value="company" />
+                <span class="write-us__switch-text text-base--m">Организация</span>
+              </label>
+            </fieldset>
           </div>
           <div class="write-us__form-field">
             <label class="write-us__form-label">
               <span class="write-us__form-label-text">
                 Имя
               </span>
-              <input type="text" name="name" class="write-us__form-input" required="">
+              <input type="text" name="name" class="write-us__form-input write-us__form-input--dark" required="">
             </label>
           </div>
           <div class="write-us__form-field">
@@ -44,7 +47,7 @@
               <span class="write-us__form-label-text">
                 E-mail
               </span>
-              <input type="email" name="email" class="write-us__form-input" required="">
+              <input type="email" name="email" class="write-us__form-input write-us__form-input--dark" required="">
             </label>
           </div>
           <div class="write-us__form-field">
@@ -52,18 +55,34 @@
               <span class="write-us__form-label-text">
                 Ваш комментарий или вопрос
               </span>
-              <textarea name="comment" class="write-us__form-input"></textarea>
+              <textarea name="comment" class="write-us__form-input write-us__form-input--dark"></textarea>
             </label>
           </div>
+          <div class="write-us__form-field">
+            <input class="write-us__file-input" id="write-us-files" type="file" name="files" multiple
+              accept=".pdf,.doc,.docx,.xls,.xlsx,.jpeg,.jpg,.png,.zip" aria-describedby="write-us-upload-hint" />
+            <label class="btn btn--dark-ghost write-us__file-label" for="write-us-files">
+              <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                <use xlink:href="#paperclip"></use>
+              </svg>
+              <span class="text-base--semibold">Прикрепить файл</span>
+            </label>
+          </div>
+
+          <p class="write-us__hint text_s--regular" id="write-us-upload-hint">
+            Можно загрузить не более 3 файлов. <br>
+            Максимальный размер всех файлов 50 MB. <br>
+            Форматы pdf, doc, docx, xls, xlsx, jpeg, zip, png
+          </p>
         </div>
+        <button class="btn write-us__form-submit" type="submit">
+          Отправить
+        </button>
         <div class="write-us__form-policy">
           Нажимая кнопку &laquo;Подать заявку&raquo;, вы&nbsp;даёте cоглаcие на&nbsp;обработку <a href="#">перcональных
             данных</a> в&nbsp;соответствии
           с&nbsp;<a href="#">Политикой конфиденциальности</a>
         </div>
-        <button class="btn write-us__form-submit" type="submit">
-          Отправить
-        </button>
       </form>
     </div>
   </div>

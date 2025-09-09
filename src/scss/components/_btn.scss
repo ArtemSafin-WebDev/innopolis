@@ -150,6 +150,7 @@
 
   &--dark-ghost {
     background-color: var(--dark-ghost-button-bg);
+    border: none;
 
     &:disabled {
       background-color: transparent;
