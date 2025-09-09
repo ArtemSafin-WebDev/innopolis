@@ -19,7 +19,7 @@
 .headline--bold {
   font-weight: 600;
   font-size: 3.2rem;
-  line-height: 100%;
+  line-height: 3.2rem;
 }
 
 .text--m {
@@ -61,5 +61,17 @@
 .text-base--m {
   font-weight: 500;
   font-size: 1.6rem;
-  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.text-base--semibold {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.text_s--regular {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }

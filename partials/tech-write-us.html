@@ -1,0 +1,89 @@
+<section class="write-us">
+  <div class="write-us__content">
+    <div class="write-us__left-col">
+      <h2 class="write-us__heading">
+        Свяжитесь с нами
+      </h2>
+      <div class="write-us__text">
+        <p>
+          Если у вас остались вопросы, оставьте свои контакты и мы ответим вам.
+        </p>
+      </div>
+      <div class="write-us__contacts">
+        <a href="tel:+78002225261" class="write-us__contacts-link">
+          +7 (800) 222-52-61
+        </a>
+        <a href="mailto:innoit@innopolis.ru" class="write-us__contacts-link">
+          innoit@innopolis.ru
+        </a>
+      </div>
+    </div>
+    <div class="write-us__right-col">
+      <form action="/" method="POST" class="write-us__form">
+        <div class="write-us__form-fields">
+          <div class="write-us__form-field">
+            <fieldset class="write-us__fieldset write-us__fieldset--switch">
+              <label class="write-us__switch">
+                <input class="write-us__radio" type="radio" name="applicant_type" value="person" checked />
+                <span class="write-us__switch-text text-base--m">Частное лицо </span>
+              </label>
+
+              <label class="write-us__switch">
+                <input class="write-us__radio" type="radio" name="applicant_type" value="company" />
+                <span class="write-us__switch-text text-base--m">Организация</span>
+              </label>
+            </fieldset>
+          </div>
+          <div class="write-us__form-field">
+            <label class="write-us__form-label">
+              <span class="write-us__form-label-text">
+                Имя
+              </span>
+              <input type="text" name="name" class="write-us__form-input write-us__form-input--dark" required="">
+            </label>
+          </div>
+          <div class="write-us__form-field">
+            <label class="write-us__form-label">
+              <span class="write-us__form-label-text">
+                E-mail
+              </span>
+              <input type="email" name="email" class="write-us__form-input write-us__form-input--dark" required="">
+            </label>
+          </div>
+          <div class="write-us__form-field">
+            <label class="write-us__form-label">
+              <span class="write-us__form-label-text">
+                Ваш комментарий или вопрос
+              </span>
+              <textarea name="comment" class="write-us__form-input write-us__form-input--dark"></textarea>
+            </label>
+          </div>
+          <div class="write-us__form-field">
+            <input class="write-us__file-input" id="write-us-files" type="file" name="files" multiple
+              accept=".pdf,.doc,.docx,.xls,.xlsx,.jpeg,.jpg,.png,.zip" aria-describedby="write-us-upload-hint" />
+            <label class="btn btn--dark-ghost write-us__file-label" for="write-us-files">
+              <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                <use xlink:href="#paperclip"></use>
+              </svg>
+              <span class="text-base--semibold">Прикрепить файл</span>
+            </label>
+          </div>
+
+          <p class="write-us__hint text_s--regular" id="write-us-upload-hint">
+            Можно загрузить не более 3 файлов. <br>
+            Максимальный размер всех файлов 50 MB. <br>
+            Форматы pdf, doc, docx, xls, xlsx, jpeg, zip, png
+          </p>
+        </div>
+        <button class="btn write-us__form-submit" type="submit">
+          Отправить
+        </button>
+        <div class="write-us__form-policy">
+          Нажимая кнопку &laquo;Подать заявку&raquo;, вы&nbsp;даёте cоглаcие на&nbsp;обработку <a href="#">перcональных
+            данных</a> в&nbsp;соответствии
+          с&nbsp;<a href="#">Политикой конфиденциальности</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
