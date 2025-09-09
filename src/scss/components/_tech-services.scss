@@ -3,7 +3,7 @@
 .tech-services {
   @include utils.blockWrapper;
   background-color: var(--bg-secondary);
-  padding: 8rem 6rem;
+  padding: 8rem 0;
 }
 .tech-services__content {
   @include utils.blockContent;

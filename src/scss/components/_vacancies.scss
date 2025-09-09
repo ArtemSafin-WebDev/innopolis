@@ -1,8 +1,8 @@
-@use "../utils";
+  @use "../utils";
 
 .vacancies {
   @include utils.blockWrapper;
-  padding: 8rem 6rem;
+  padding: 8rem 0;
   background-color: var(--bg-secondary);
 }
 

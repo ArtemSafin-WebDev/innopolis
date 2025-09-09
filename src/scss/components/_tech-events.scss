@@ -4,7 +4,7 @@
 .tech-events {
   @include utils.blockWrapper;
   background-color: var(--bg-secondary);
-  padding: 8rem 6rem;
+  padding: 8rem 0;
 }
 
 .tech-events__content {

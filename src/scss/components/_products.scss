@@ -4,7 +4,7 @@
   @include utils.blockWrapper;
   user-select: none;
   background-color: var(--bg-secondary);
-  padding: 8rem 6rem;
+  padding: 8rem 0;
   overflow: hidden;
 }
 
@@ -37,8 +37,16 @@
 
 .products__swiper {
   overflow: hidden;
+  height: 100%;
+}
+
+.products__swiper > .swiper-wrapper {
+  display: flex !important;
+  flex-grow: 1;
 }
 
 .products__swiper > .article-card {
   min-height: 49rem;
+  height: 100% !important;
+  display: flex !important;
 }

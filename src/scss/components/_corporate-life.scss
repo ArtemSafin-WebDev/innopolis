@@ -2,7 +2,7 @@
 
 .corporate-life {
   @include utils.blockWrapper;
-  padding: 8rem 6rem;
+  padding: 8rem 0;
   background-color: var(--dark-bg-primary);
   border-top-left-radius: var(--corner-radius-xl);
   border-top-right-radius: var(--corner-radius-xl);
