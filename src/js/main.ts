@@ -19,7 +19,7 @@ import reviews from "./reviews";
 import tabs from "./tabs";
 import stages from "./stages";
 import SubjectLanguage from "./subject";
-
+import fileUpload from "./fileUpload";
 
 document.addEventListener("DOMContentLoaded", () => {
   science();
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   reviews();
   stages();
   SubjectLanguage();
+  fileUpload();
 });
 
 window.addEventListener("load", () => {

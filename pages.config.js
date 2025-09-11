@@ -3,7 +3,7 @@ import home from "./pages-data/home";
 import science from "./pages-data/home";
 import magistracy from "./pages-data/magistracy";
 import masterOnline from "./pages-data/masterOnline";
-
+import olympiad from "./pages-data/olympiad";
 
 const pagesConfig = {
   ...home,
@@ -11,6 +11,7 @@ const pagesConfig = {
   ...magistracy,
   ...bachelor,
   ...masterOnline,
+  ...olympiad,
 };
 
 export default pagesConfig;

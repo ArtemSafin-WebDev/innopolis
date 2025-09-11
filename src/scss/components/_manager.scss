@@ -5,6 +5,10 @@
   @include utils.blockWrapper;
   padding: 8rem 0;
   background-color: var(--grey-color);
+  &--dark {
+    background-color: var(--dark-bg-color);
+    color: white;
+  }
 }
 
 .manager__content {
